@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
         <div className="footer">
-            &copy; 2024 Silicon. All rights reserved.
+            &copy; © 2024 Silicon. All rights reserved. Credit MadrasThemes
         </div>
     </footer>
   )
