@@ -9,21 +9,21 @@ import Recieve from './components/Recieve'
 import Reviews from './components/Reviews'
 import FAQ from './components/FAQ'
 import Newsletter from './components/Newsletter'
+import Branding from './components/Branding'
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
+      <Branding />
       <Features />
-      
       <Functions />
       <SimpleTransfer />
       <Recieve />
       <Reviews />
       <FAQ />
       <Newsletter />
-
       <Footer />
     </>
   )

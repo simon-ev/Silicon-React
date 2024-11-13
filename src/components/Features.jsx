@@ -3,6 +3,7 @@ import React from 'react'
 function Features() {
   return (
     <section className="p2-container">
+        
             <div className="pwc">
                 <img src="src/assets/images/PageTwo/Phonewithcard.svg" alt="Phone with card"></img>
             </div>

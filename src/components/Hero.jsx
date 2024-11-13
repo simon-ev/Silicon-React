@@ -11,11 +11,12 @@ function Hero() {
                     <div className="market-btns">
                         <a href="#" className="store-btn">
                             <span className="sr-only">Download on the App Store</span>
-                            <img src="/src/assets/images/PageOne/AppStore.svg" alt="App Store"></img>
+                            <img className="btn-filter" src="/src/assets/images/PageOne/AppStore.svg" alt="App Store"></img>
                         </a>
                         <a href="#" className="store-btn">
                             <span className="sr-only">Get it on Google Play</span>
                             <img src="/src/assets/images/PageOne/GooglePlay.svg" alt="Google Play"></img>
+                            <img className="btn-filter" src="/src/assets/images/PageOne/GooglePlay-text.svg" alt="Google Play"></img>
                         </a>
                     </div>
 
@@ -33,9 +34,9 @@ function Hero() {
                 <div className="phone-img-container">
                     <img src="/src/assets/images/PageOne/Phones.svg" alt="App showcase on phones"></img>
                 </div>
-                <div className="logos-p">
+                {/* <div className="logos-p">
                     <img src="/src/assets/images/PageOne/Logos.svg" alt="Partner Logos"></img>
-                </div>
+                </div> */}
                 
             </div>
         </section>

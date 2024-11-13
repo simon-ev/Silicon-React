@@ -25,7 +25,6 @@ function Reviews() {
                     </div>
                 </div>
                 <div className="rev-cards">
-                    
                     <img src="src/assets/images/PageFive/5stars.svg" alt="5 star rating"></img>
                     <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
                     <div className="author">
