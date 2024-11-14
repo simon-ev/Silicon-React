@@ -627,10 +627,6 @@ header .container {
         margin-top: 3em;
     }
 
-    
-
-    
-
 }
 
 .receive {
@@ -674,26 +670,6 @@ header .container {
     }
 }
 
-.reviews {
-
-    padding: var(--frame-padding);
-    padding-top: 4rem;
-    background-color: var(--color-bg-2);
-    display: flex;
-    flex-direction: row;
-    
-    
-}     
-.review-cont {
-   
-    display: grid; 
-    grid-template-columns: 24rem 24rem;
-    gap: 2rem;
-    margin-bottom: 6rem;
-    padding-left: 7rem;
-
-}
-
 .p-start {
     
     max-width: 337px;
@@ -703,29 +679,63 @@ header .container {
     color: var(--color-dark);
     font-weight: 900;
     line-height: 1.3;
+    margin-top: -50px;
     
 }
 
-.rev-cards {
+.reviews {
+
+    padding: var(--frame-padding);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--color-bg-2);
+
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     
+}     
+.review-cont {
+
     background-color: var(--color-rev-card);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-top: 4rem;
+    
+    
+    
     box-shadow: 0 0 2px var(--color-gray-300);
     border-radius: 7px;
     
     color: var(--color-gray-700);
- 
+    max-width: 416px;
+
+
+}
+
+
+
+.rev-cards {
+
+    
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    line-height: 1.6;
+}
+
+.fa-regular {
+    color: #b4b7c9;
+    padding-bottom: 2rem;
+}
+
+.fa-solid {
+    color: #ffba08;
+    padding-bottom: 2rem;
 }
 
 .icon-quote {
-    margin-bottom: -70px; 
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    padding-left: 0.8rem;
-    
+    margin-top: -25px;
+
 }
 
 
