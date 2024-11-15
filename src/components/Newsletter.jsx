@@ -1,4 +1,5 @@
 import React from 'react'
+import SubscribeAlert from './SubscribeAlert'
 
 function Newsletter() {
   return (
@@ -9,11 +10,7 @@ function Newsletter() {
                   <img src="src/assets/images/PageSix/notification.svg" alt="Notification Bell"></img>
                   <h4>Subscribe to our newsletter to stay informed about latest updates</h4>
               </div>
-              <div className="subscribe-email">
-                  <input type="text" placeholder="Your Email"></input>
-                  <button className="btn-subscribe">Subscribe</button>
-                  
-              </div>
+              <SubscribeAlert />
 
       </section>
     </div>

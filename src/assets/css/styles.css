@@ -41,7 +41,7 @@
     --frame-padding: 0 19.5rem 0 19.5rem;
 }
 
-[data-theme="dark"] {
+.dark {
     --color-dark: #ffffff;
     --color-primary: #6366F1;
     --color-gray-800: #ffffff;
@@ -79,7 +79,7 @@
     .faq-card {
         box-shadow: 2px 2px 2px 0 transparent;
         border-radius: 10px;
-        border: solid var(--color-white-c);
+        border: solid var(--color-bg);
     }
 
 
@@ -716,25 +716,28 @@ header .container {
 
 .rev-cards {
 
-    
+    padding-right: 1rem;
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
     line-height: 1.6;
+
+    .fa-regular {
+        color: #b4b7c9;
+        padding-bottom: 2rem;
+    }
+    
+    .fa-solid {
+        color: #ffba08;
+        padding-bottom: 2rem;
+    }
 }
 
-.fa-regular {
-    color: #b4b7c9;
-    padding-bottom: 2rem;
-}
 
-.fa-solid {
-    color: #ffba08;
-    padding-bottom: 2rem;
-}
 
 .icon-quote {
     margin-top: -25px;
+    margin-left: -10px;
 
 }
 
@@ -745,6 +748,7 @@ header .container {
     display: flex;
     gap: 1rem;
     padding-bottom: 1rem;
+    padding-top: 1rem;
     
 }
 
@@ -772,7 +776,7 @@ header .container {
     display: flex;
     flex-direction: row;
     background-color: var(--color-bg);
-
+    padding-bottom: 5rem;
 
     h2 {
         font-size: 32px;
@@ -849,18 +853,21 @@ header .container {
     
     max-width: 700px; 
     padding-bottom: 0rem;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
     gap: 1rem;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .faq-card {
-    box-shadow: 2px 4px 4px var(--color-gray-200);
-    background-color: var(--color-white-c);
+    box-shadow: 2px 4px 10px 1px var(--color-gray-200);
+    
     border-radius: 10px;
     border: solid transparent;
-    
+    width: 705px;
+}
+
+.open .faq-card {
+    background-color: #0B0F19;
 }
 
 
@@ -872,6 +879,8 @@ header .container {
     padding: .7rem 1.7rem .7rem 1.7rem;
     cursor: pointer;
     height: 68px;
+    background-color: var(--color-white-c);
+    border-radius: 10px;
 
     p {
         font-size: 16px;
@@ -902,20 +911,18 @@ header .container {
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
-
     transition: grid-template-rows 300ms, padding-bottom 300ms;
-    /* padding: 0 1.7rem;  */
-
-    margin-left: 1.7rem;
-    
-    
-    
+    background-color: var(--color-white-c);
+    padding-left: 1.7rem;
+    padding-top: 1rem;
+    margin-top: -15px;
+    border-radius: 10px;
 }
 
 .open .answer {
     grid-template-rows: 1fr;
     padding-bottom: 1.6rem;
-    
+
 }
 
 .open .btn-round-faq {
@@ -930,6 +937,8 @@ header .container {
     line-height: 1.5;
     width: 95%;
     color: var(--color-gray-700);
+    
+    
 }
 
 
@@ -982,19 +991,22 @@ header .container {
     flex-direction: row;
     background-color: var(--color-white-b);
     
+    
 
-    input[type=text] {
-        background-color: var(--color-white-b);
+    input[type=email]  {
+        background-color: var(--color-rev-card);
         background-image: url("src/assets/images/PageSix/emaillogo.svg");
         background-position: 10px 17px;
         background-repeat: no-repeat;
         padding-left: 40px;
         font-size: 16px;
         border: transparent;
+        color: var(--color-dark);
+        
         
       }
       
-      input[type=text]:focus {
+      input[type=email]:focus {
         border: none;
       }
 

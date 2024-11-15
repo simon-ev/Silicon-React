@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import AccordionItem from './AccordionItem'
 
 function FAQ() {
+
+    const [accordions, setAccordions] = useState([])
+
+    const fetchFaq = async () => {
+        const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq')
+        const data = await res.json()
+        setAccordions(data)
+    }
+    
+    useEffect(() => {
+        fetchFaq()
+    }, [])
+
   return (
     <section className="faq">
             <div className="faq-title">
@@ -33,104 +47,18 @@ function FAQ() {
             </div>
             
 
-            <div className="faq-questions">
+            
+            <div className="faq-cards">
 
-                <div className="faq-card">
-                    <div className="question">
-                        <p>Is any of my personal information stored in the App?</p>
-        
-                        <button className="btn-round-faq">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </div>
-        
-                    <div className="answer open">
-                        <div className="expandable">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quo molestias sequi! Autem minus ipsa saepe, expedita voluptatem deleniti. Debitis quas non est omnis praesentium dolore tempora culpa excepturi ullam.
-                        </div>
-                    </div>
-                </div>
-
-                <div className="faq-card">
-                    <div className="question">
-                        <p>What formats can I download my transaction history in?</p>
-        
-                        <button className="btn-round-faq">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </div>
-        
-                    <div className="answer open">
-                        <div className="expandable">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quo molestias sequi! Autem minus ipsa saepe, expedita voluptatem deleniti. Debitis quas non est omnis praesentium dolore tempora culpa excepturi ullam.
-                        </div>
-                    </div>
-                </div>
-
-                <div className="faq-card open">
-                    <div className="question">
-                        <p>Can I schedule future transfers?</p>
-        
-                        <button className="btn-round-faq">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </div>
-        
-                    <div className="answer">
-                        <div className="expandable">
-                            <p>
-                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <div className="question">
-                        <p>When can I use Banking App services?</p>
-        
-                        <button className="btn-round-faq">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </div>
-        
-                    <div className="answer open">
-                        <div className="expandable">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quo molestias sequi! Autem minus ipsa saepe, expedita voluptatem deleniti. Debitis quas non est omnis praesentium dolore tempora culpa excepturi ullam.
-                        </div>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <div className="question">
-                        <p>Can I create my own password that is easy for me to remember?</p>
-        
-                        <button className="btn-round-faq">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </div>
-        
-                    <div className="answer open">
-                        <div className="expandable">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quo molestias sequi! Autem minus ipsa saepe, expedita voluptatem deleniti. Debitis quas non est omnis praesentium dolore tempora culpa excepturi ullam.
-                        </div>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <div className="question">
-                        <p>What happens if I forget or lose my password?</p>
-        
-                        <button className="btn-round-faq">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </button>
-                    </div>
-        
-                    <div className="answer open">
-                        <div className="expandable">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quo molestias sequi! Autem minus ipsa saepe, expedita voluptatem deleniti. Debitis quas non est omnis praesentium dolore tempora culpa excepturi ullam.
-                        </div>
-                    </div>
-                </div>
-        
+                    {
+                        accordions.map(item => (
+                            <AccordionItem key={item.id} item={item} />
+                        ))   
+                    } 
+                    
             </div>
+ 
+            
 
         </section>
   )
